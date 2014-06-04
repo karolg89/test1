@@ -3,6 +3,14 @@
 
 using namespace std;
 
+class X{
+	
+	
+	public:
+	int x,y,z;
+	
+	
+};
 
 int main(){
 	

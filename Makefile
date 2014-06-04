@@ -1,6 +1,15 @@
+CC=g++
+EXEC=test
+CFLAGS=-c -Wall
+LDFLAGS=
+SRC=main.cpp
+OBJ=$(SRC:.cpp=.o)
 
-all:
-	g++ main.cpp -o prog
+all: $(SRC) $(EXEC)
+
+$(EXEC): $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o  $@
 	
-run: prog
-	./prog
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
